@@ -26,22 +26,20 @@ def compare(a, y):
             B += 1
     if A == len(a):
         return True
-    return f'{A}A{B}B，加油！'
-
+    return f'{A}A{B}B，繼續：'
 
 # 生成答案
 A = give_ans()
 
 # 輸入你的答案
-yours = str(input('請輸入四位數字：'))
+you = str(input('請輸入四位數字：'))
 
 while True:
-    if check_yours(yours):
-        if compare(A, yours) == True:
+    if check_yours(you):
+        if compare(A, you) == True:
             print('答對了，恭喜你！')
             break
         else:
-            print(compare(A, yours))
-            yours = str(input('再接再厲：'))
+            you = str(input(compare(A, you)))
     else:
-        yours = str(input('好好給，謝謝：'))
+        you = str(input('好好給，謝謝：'))
