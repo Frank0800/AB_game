@@ -8,12 +8,14 @@ def check_yours(S):
     if len(l) == len(set(l)):
         return True
     return False
+
 def give_ans():
     # 生成答案
     num = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     random.shuffle(num)
     ans = ''.join(num[0:4])
     return ans
+
 def compare(a, y):
     # 生成幾A幾B
     A = 0; B = 0
@@ -25,6 +27,7 @@ def compare(a, y):
     if A == len(a):
         return True
     return f'{A}A{B}B，加油！'
+
 
 # 生成答案
 A = give_ans()
